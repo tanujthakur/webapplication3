@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: WebApplication3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: WebApplication3
+  template:
+    metadata:
+      labels:
+        app: WebApplication3
+    spec:
+      containers:
+        - name: WebApplication3
+          image: acrnehartihabbi1234321.azurecr.io
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: WebApplication3
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+  
+   selector:
+    app: WebApplication3
