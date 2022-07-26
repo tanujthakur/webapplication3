@@ -13,7 +13,7 @@ spec:
         app: webapplication3
     spec:
       containers:
-      - name: WebApplication3
+      - name: webapplication3
         image: acrnehartihabbi1234321.azurecr.io/tanujthakur/webapplication3:#{Build.BuildId}#
         ports:
         - containerPort: 80
