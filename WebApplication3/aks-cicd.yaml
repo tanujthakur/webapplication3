@@ -15,6 +15,7 @@ spec:
       containers:
       - name: webapplication3
         image: acrnehartihabbi1234321.azurecr.io/tanujthakur/webapplication3
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 # service type loadbalancer     
