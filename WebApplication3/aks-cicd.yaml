@@ -15,6 +15,7 @@ spec:
       containers:
         - name: WebApplication3
           image: acrnehartihabbi1234321.azurecr.io
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
