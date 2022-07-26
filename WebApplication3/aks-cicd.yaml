@@ -1,33 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-python-deployment
+  name: webapplication3
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: WebApplication3
+      app: webapplication3
   template:
     metadata:
       labels:
-        app: WebApplication3
+        app: webapplication3
     spec:
       containers:
       - name: WebApplication3
         image: acrnehartihabbi1234321.azurecr.io/tanujthakur/webapplication3:#{Build.BuildId}#
         ports:
         - containerPort: 80
-# service type loadbalancer       
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-python-app-svc
-spec:
-  selector:
-    app: WebApplication3
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 31055
-  type: LoadBalancer
+# service type loadbalancer     
