@@ -8,13 +8,10 @@ trigger:
 resources:
 - repo: self
 
-pool:
-  name: mypool
-
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'c62854ca-3b2f-49bd-9dbf-838ce7df89dc'
-  imageRepository: 'tanujthakurwebapplication'
+  imageRepository: 'tanujthakur/webapplication'
   containerRegistry: 'acrnehartihabbi1234321.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
