@@ -1,0 +1,10 @@
+bases:
+- ../base
+resources:
+- aks-cicd.yaml
+namespace: webapplication3
+
+images:
+- name: webapplication3
+- newName: my.docker.registry.com/webapplication3/webapplication3
+  newTag: test
