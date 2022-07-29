@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapplication3
-        image: "acrnehartihabbi1234321.azurecr.io/webapplication3:#(Build.BuildId)#"
+        image: "acrnehartihabbi1234321.azurecr.io/webapplication3:#{Build.BuildId}#"
         imagePullPolicy: Always
         ports:
         - containerPort: 80
