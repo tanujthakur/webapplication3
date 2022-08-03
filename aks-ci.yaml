@@ -21,3 +21,13 @@ spec:
         ports:
         - containerPort: 80
 # service type loadbalancer    
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapplication3  
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+  selector:
+    app: webapplication3
